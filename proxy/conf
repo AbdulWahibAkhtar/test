@@ -1,0 +1,19 @@
+server {
+    listen       80;
+    server_name  localhost;
+    
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm insert.html;  
+    }
+
+    location /person {
+        proxy_pass   http://backend:5000;
+    }
+
+    location /persons {
+        proxy_pass   http://backend:5000;
+    }
+
+
+}
