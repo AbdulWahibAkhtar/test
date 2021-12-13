@@ -4,7 +4,7 @@ server {
     
     location / {
         root   /usr/share/nginx/html;
-        index  insert.html index.html   
+        index  insert.html index.html index.html   
     }
 
     location /person {
