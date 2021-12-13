@@ -37,7 +37,7 @@ services:
       - backnet
       - frontnet
     depends_on:
-      database: service_healthy
+      database
   proxy:
     build: proxy
     image: proxy
