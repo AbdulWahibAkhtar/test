@@ -12,5 +12,5 @@ COPY site.crt /etc/nginx/ssl/
 ssl_certificate = site.crt     
 ssl_certificate_key = rootCA.pem 
 
-run ./dir/
+
 
