@@ -7,7 +7,8 @@ server {
 server {
     listen       443;
     server_name  localhost;
-
+}
+ 
     ssl_certificate     /etc/nginx/ssl/site.crt
     ssl_certificate_key /etc/nginx/ssl/rootCA.pem
 
