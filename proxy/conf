@@ -2,20 +2,19 @@ server {
     listen          80;
     server_name     localhost;
     return          301;
+}
+
+server {
+    listen       443;
+    server_name  localhost;
+
+    ssl_certificate     /etc/nginx/ssl/site.crt
+    ssl_certificate_key /etc/nginx/ssl/rootCA.pem
 
     location / {
         root   /usr/share/nginx/html;
         index  insert.html index.html index.html   
     }
-
-server {
-    listen       443;
-    server_name  localhost;
-    
-    ssl_certificate     /etc/nginx/ssl/site.crt
-    ssl_certificate_key /etc/nginx/ssl/rootCA.pem
-}
-
 
     location /person {
         proxy_pass   http://backend:5000;
@@ -24,6 +23,5 @@ server {
     location /persons {
         proxy_pass   http://backend:5000;
     }
-
 
 }
