@@ -14,3 +14,6 @@ ssl_certificate_key = rootCA.pem
 
 ssl_certificate     /etc/nginx/ssl/site.crt
 ssl_certificate_key /etc/nginx/ssl/rootCA.pem
+
+COPY rootCA.pem /etc/nginx/ssl/
+COPY site.crt /etc/nginx/ssl/
