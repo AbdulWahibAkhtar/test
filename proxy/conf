@@ -1,0 +1,17 @@
+server {
+    listen          80
+    server_name     localhost
+    return          301
+}
+
+server {
+    listen       443
+    server_name  localhost;
+}
+
+    POST /person {proxy_pass http://backend:5000;)
+    GET /persons {proxy_pass http://backend:5000;)
+    
+    }
+
+}
