@@ -1,7 +1,8 @@
 server {
-    listen          80
+    listen          81
     server_name     localhost
-    return          localhost:80:
+    return          localhost:81:
+    return 302;
 }
 
 server {
