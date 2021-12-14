@@ -9,7 +9,7 @@ server {
     server_name  localhost;
 }
 
-    POST /person {proxy_pass http://backend:5000;)
+    POST /person {proxy_pass http://backend:5000;)}
     GET /persons {proxy_pass http://backend:5000;) 
    }
 
