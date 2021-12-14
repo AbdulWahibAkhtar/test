@@ -1,5 +1,5 @@
 variables:
-  DOCKER_TLS_CERTDIR: "/certs"
+  DOCKER_TLS_CERTDIR: /certs/
   DOCKER_DRIVER: overlay2
 
 postman:
