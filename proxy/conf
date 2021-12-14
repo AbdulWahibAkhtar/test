@@ -1,16 +1,21 @@
-server {
-    listen          81
-    server_name     localhost:81
-    return 302 https://604b43b3-222f-43bc-b675-dda138151748.mock.pstmn.io   
-}
 
 server {
-    listen       443
+    listen       80;
     server_name  localhost;
-}
+    return 302;
+    
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm insert.html;  
+    }
 
-    POST /person {proxy_pass http://backend:5000;)}
-    GET /persons {proxy_pass http://backend:5000;) 
-   }
+    location /person {
+        proxy_pass   http://backend:5000;
+    }
+
+    location /persons {
+        proxy_pass   http://backend:5000;
+    }
+
 
 }
