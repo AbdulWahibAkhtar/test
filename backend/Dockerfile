@@ -9,8 +9,7 @@ ENV FLASK_ENV development
 CMD flask run --host=0.0.0.0
 COPY rootCA.pem /etc/nginx/ssl/
 COPY site.crt /etc/nginx/ssl/
-ssl_certificate = site.crt     
-ssl_certificate_key = rootCA.pem 
+
 
 
 
